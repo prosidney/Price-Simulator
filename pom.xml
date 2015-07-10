@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>JournalDev-PrimefacesWebApplication</groupId>
-	<artifactId>JournalDev-PrimefacesWebApplication</artifactId>
+	<groupId>com.ibm</groupId>
+	<artifactId>price-simulator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<build>
@@ -127,29 +127,39 @@
             <version>1.4</version>
         </dependency>
         
-		<!-- Logging with SLF4J & LogBack -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-            <scope>runtime</scope>
-        </dependency>
+		<!-- Log4j -->
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>	        
         
         <dependency>
             <groupId>com.sun.el</groupId>
             <artifactId>el-ri</artifactId>
             <version>1.0</version>
-        </dependency>                
+        </dependency>
+        
+        <dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>${org.springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${org.springsecurity.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${org.springsecurity.version}</version>
+		</dependency>                
 	</dependencies>
 	<properties>
 		<!-- Spring -->
         <spring-framework.version>4.0.3.RELEASE</spring-framework.version>
+        <org.springsecurity.version>3.2.0.RELEASE</org.springsecurity.version>
         <aspectj.version>1.7.4</aspectj.version>
  
         <!-- Hibernate / JPA -->
@@ -157,9 +167,5 @@
  
         <!-- JSF Version -->
         <jsf.version>2.2.10</jsf.version>
- 
-        <!-- Logging -->
-        <logback.version>1.0.13</logback.version>
-        <slf4j.version>1.7.5</slf4j.version>
 	</properties>
 </project>
