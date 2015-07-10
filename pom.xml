@@ -159,7 +159,7 @@
 	<properties>
 		<!-- Spring -->
         <spring-framework.version>4.0.3.RELEASE</spring-framework.version>
-        <org.springsecurity.version>3.2.0.RELEASE</org.springsecurity.version>
+        <org.springsecurity.version>4.0.1.RELEASE</org.springsecurity.version>
         <aspectj.version>1.7.4</aspectj.version>
  
         <!-- Hibernate / JPA -->
