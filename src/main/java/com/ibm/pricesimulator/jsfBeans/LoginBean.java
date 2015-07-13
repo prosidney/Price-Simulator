@@ -3,6 +3,7 @@ package com.ibm.pricesimulator.jsfBeans;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
 
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -11,9 +12,16 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
+
+import org.primefaces.context.RequestContext;
+
 @Component
 @ManagedBean(name="loginMgmtBean")
-@RequestScoped
+@SessionScoped
 public class LoginBean {
   
     private String userName = null; 
@@ -22,8 +30,20 @@ public class LoginBean {
     @ManagedProperty(value="#{authenticationManager}")
     private AuthenticationManager authenticationManager = null;
     
-    public String login() {
+/*    public String login() {
         try {
+            Authentication request = new UsernamePasswordAuthenticationToken(this.getUserName(), this.getPassword());
+            Authentication result = authenticationManager.authenticate(request);
+            SecurityContextHolder.getContext().setAuthentication(result);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+            return "incorrect";
+        }
+        return "correct";
+    }*/
+    
+    public String login() {
+    	try {
             Authentication request = new UsernamePasswordAuthenticationToken(this.getUserName(), this.getPassword());
             Authentication result = authenticationManager.authenticate(request);
             SecurityContextHolder.getContext().setAuthentication(result);
