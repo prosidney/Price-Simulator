@@ -1,44 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.org/ui">
-      
-    <h:body>
-    	<ui:composition template="template/common/commonLayout.xhtml">
-	   		<ui:define name="content">
-    <div align="center" style="">
-	<h:form>
-        <p:messages id="messages" showDetail="false" />
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 
-        <p:panel id="panel" header="Login">
+<h:body>
+	<ui:composition template="template/common/commonLayout.xhtml">
+		<ui:define name="content">
+			<div align="center" style="">
+				<h:form>
+					<p:messages id="messages" showDetail="false" />
 
-            <h:panelGrid columns="3" cellpadding="5">
-                <p:outputLabel for="userName" value="User Name:" />
-                <p:inputText id="userName" value="#{loginMgmtBean.userName}" required="true" label="User name">
-                    <f:validateLength minimum="3" />
-                </p:inputText>
-                <p:message for="userName" display="icon" />
+					<p:panel id="panel" header="Login">
 
-                <p:outputLabel for="password" value="Password:" />
-                <p:password id="password"
-                    value="#{loginMgmtBean.password}" required="true"
-                    label="Password">
-                    <f:validateLength minimum="3" />
-                </p:password>
-                <p:message for="password" display="icon" />
-            </h:panelGrid>
+						<h:panelGrid columns="3" cellpadding="5">
+							<p:outputLabel for="userName" value="User Name:" />
+							<p:inputText id="userName" value="#{loginMgmtBean.userName}" required="true" label="User name">
+								<f:validateLength minimum="3" />
+							</p:inputText>
+							<p:message for="userName" display="icon" />
 
-            <p:commandButton value="Login" update="panel messages" action="#{loginMgmtBean.login}" />
-        </p:panel>
-    </h:form>
-    </div>
-    <div>
-        <h:messages></h:messages>
-    </div>
-	   		</ui:define>
-    	</ui:composition>
-    </h:body>
- 
+							<p:outputLabel for="password" value="Password:" />
+							<p:password id="password" value="#{loginMgmtBean.password}" required="true" label="Password">
+								<f:validateLength minimum="3" />
+							</p:password>
+							<p:message for="password" display="icon" />
+						</h:panelGrid>
+
+						<p:commandButton value="Login" update="panel messages" action="#{loginMgmtBean.login}" />
+					</p:panel>
+				</h:form>
+			</div>
+			<div>
+				<h:messages></h:messages>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+
 </html>
