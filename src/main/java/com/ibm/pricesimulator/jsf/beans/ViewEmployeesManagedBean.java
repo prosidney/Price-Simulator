@@ -1,4 +1,4 @@
-package com.ibm.pricesimulator.jsfBeans;
+package com.ibm.pricesimulator.jsf.beans;
 
 import java.util.ArrayList;
 import java.util.List;

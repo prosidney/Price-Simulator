@@ -1,4 +1,4 @@
-package com.ibm.pricesimulator.jsfBeans;
+package com.ibm.pricesimulator.jsf.beans;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
