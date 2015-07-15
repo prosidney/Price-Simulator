@@ -14,13 +14,18 @@
         <from-view-id>/login-page.xhtml</from-view-id>
         <navigation-case>
             <from-action>#{loginMgmtBean.login}</from-action>
-            <from-outcome>correct</from-outcome>
-            <to-view-id>/internal/other.xhtml</to-view-id>
-        </navigation-case>
-        <navigation-case>
-            <from-action>#{loginMgmtBean.login}</from-action>
             <from-outcome>incorrect</from-outcome>
             <to-view-id>/login-page.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
+	<navigation-rule>
+		<display-name>login.xhtml</display-name>
+		<from-view-id>/login-page.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{loginMgmtBean.login}</from-action>
+			<from-outcome>correct</from-outcome>
+			<to-view-id>/internal/index.xhtml</to-view-id>
+			<redirect></redirect>
+		</navigation-case>
+	</navigation-rule>
 </faces-config>
