@@ -1,4 +1,4 @@
-package com.ibm.pricesimulator.jsf.beans;
+package com.ibm.pricingsimulator.jsf.beans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ import javax.faces.bean.SessionScoped;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.ibm.pricesimulator.data.Employee;
-import com.ibm.pricesimulator.service.PersonServiceImpl;
+import com.ibm.pricingsimulator.data.Employee;
+import com.ibm.pricingsimulator.service.PersonServiceImpl;
 
 @Component
 @ManagedBean

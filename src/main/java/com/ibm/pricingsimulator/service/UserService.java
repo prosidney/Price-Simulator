@@ -1,4 +1,4 @@
-package com.ibm.pricesimulator.service;
+package com.ibm.pricingsimulator.service;
 
 import org.springframework.stereotype.Service;
 

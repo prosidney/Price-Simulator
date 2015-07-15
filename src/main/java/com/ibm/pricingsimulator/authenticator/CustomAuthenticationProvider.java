@@ -1,6 +1,7 @@
-package com.ibm.pricesimulator.authenticator;
+package com.ibm.pricingsimulator.authenticator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
-import com.ibm.pricesimulator.service.UserService;
+import com.ibm.pricingsimulator.service.UserService;
 
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
@@ -33,12 +34,15 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 			throw new BadCredentialsException(e.getMessage());
 		}
  
-        return new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), password, createRole());
+        return new UsernamePasswordAuthenticationToken(authentication.getPrincipal(), password, createRole("ROLE_ACCESS"));
     }
     
-    public Collection<GrantedAuthority> createRole() {
+    public Collection<GrantedAuthority> createRole(String... roles) {
     	List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-    	authorities.add(new SimpleGrantedAuthority("ROLE_ACCESS"));
+    	
+    	for (String role : Arrays.asList(roles)) {
+    		authorities.add(new SimpleGrantedAuthority(role));
+		}
     	
         return authorities;
     }

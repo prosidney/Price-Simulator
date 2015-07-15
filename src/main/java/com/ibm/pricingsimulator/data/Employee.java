@@ -1,4 +1,4 @@
-package com.ibm.pricesimulator.data;
+package com.ibm.pricingsimulator.data;
 
 public class Employee {
 	private String employeeId;

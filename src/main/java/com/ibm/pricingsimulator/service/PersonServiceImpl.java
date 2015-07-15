@@ -1,11 +1,11 @@
-package com.ibm.pricesimulator.service;
+package com.ibm.pricingsimulator.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.ibm.pricesimulator.data.Employee;
+import com.ibm.pricingsimulator.data.Employee;
  
 @Service
 public class PersonServiceImpl {

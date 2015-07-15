@@ -35,7 +35,7 @@
         <sec:authentication-provider ref="customAuthenticationProvider" />
     </sec:authentication-manager>    
  
-    <bean id="loginBean" name="loginBean" class="com.ibm.pricesimulator.jsf.beans.LoginBean" scope="prototype">
+    <bean id="loginBean" name="loginBean" class="com.ibm.pricingsimulator.jsf.beans.LoginBean" scope="prototype">
         <property name="authenticationManager" ref="authenticationManager"></property>
     </bean>	
 </beans>
