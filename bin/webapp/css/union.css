@@ -1,0 +1,101 @@
+/*header*/
+#ibm-leadspace-body h1 {
+	width : 100% !important;
+}
+/*customer tab*/
+.customer-result{
+	width: 300px;
+	background-color: #fff;
+	z-index: 910;
+	position: absolute;
+	padding-bottom: 14px;
+	text-align: left;
+	-o-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #434446;
+}
+
+.customer-result ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: #333333;
+	width: 300px;
+}
+
+.customer-result ul li{
+    overflow: hidden;
+	cursor: pointer;
+	letter-spacing: .01em;
+	line-height: 16px;
+	height: 18px;
+    padding: 4px 10px;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.customer-result ul li.noDataLi{
+    cursor: auto;
+}
+
+.customer-result ul li.selected{
+    background-color: #e0f0f8;
+	border-top: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
+}
+
+.customer-result ul li span{
+    text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #666;
+	font-size: 11px;
+	color: #000;
+}
+
+/*service request tab*/
+.userinfo-overlay-col-3-1 {
+	width : 30%
+}
+
+ul.userinf-overlay-list li {
+    cursor: pointer;
+}
+
+ul.userinf-overlay-list li img {
+	width: 55px;
+	height: 55px;
+}
+
+.userinfo-overlay-content {
+	height: 210px;
+}
+#user_info_overLay_id{
+    width: 200px;
+    top: 0px;
+}
+#user_info_overLay_id {
+	float: left;
+}
+#overlay_search_btn_id{
+	float: left;
+	cursor: pointer;
+}
+#searchUserLoading {
+	width: 20px;
+    padding: 0px;
+    float: left;
+}
+#previousPageBtn {
+	float: left;
+}
+#nextPageBtn {
+	float: right;
+}
+
+/*override*/
+.dijitSelect {
+	max-width: 100% !important;
+}

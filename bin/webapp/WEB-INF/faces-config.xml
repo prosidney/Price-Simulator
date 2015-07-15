@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+    
+	<application>
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+    </application>    
+    
+<!-- navigation-rule for login.xhtml -->
+	<navigation-rule>
+        <from-view-id>/login-page.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{loginMgmtBean.login}</from-action>
+            <from-outcome>correct</from-outcome>
+            <to-view-id>/internal/other.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-action>#{loginMgmtBean.login}</from-action>
+            <from-outcome>incorrect</from-outcome>
+            <to-view-id>/login-page.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

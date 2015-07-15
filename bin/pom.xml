@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ibm</groupId>
-	<artifactId>price-simulator</artifactId>
+	<artifactId>pricing-simulator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<build>
@@ -154,13 +154,7 @@
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
 			<version>${org.springsecurity.version}</version>
-		</dependency>     
-		
-		<dependency>
-			<groupId>com.ibm.swat.password</groupId>
-			<artifactId>cwa</artifactId>
-			<version>2</version>
-		</dependency>           
+		</dependency>                
 	</dependencies>
 	<properties>
 		<!-- Spring -->
